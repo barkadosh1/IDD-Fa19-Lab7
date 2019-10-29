@@ -29,13 +29,13 @@ I then focused on documenting the major code additions to better understand how 
 ```js
 const server = http.Server(app);        // connects http library to server
 ```
-However, I was able to find several pieces of code that were added to pictureServer (present in pictureServer and not in helloYou). The first piece of code was the following, which loads the webcam in.
+However, I was able to find several pieces of code that were added to pictureServer (present in pictureServer and not in helloYou). The first piece of code was the following, which loads the webcam in:
 
 ```js
 var NodeWebcam = require( "node-webcam" );
 ```
 
-The next chunk of code that was added to the pictureServer code was primarily for setting up the web cam and choosing how it will operate, such as the size of the picture, the delay, where to save the shots, output types, etc. The final line of code in this chunk simply starts up the web cam.
+The next chunk of code that was added to the pictureServer code was primarily for setting up the web cam and choosing how it will operate, such as the size of the picture, the delay, where to save the shots, output types, etc. The final line of code in this chunk simply starts up the web cam:
 
 ```js
 var opts = { 
