@@ -83,8 +83,10 @@ parser.on('data', function(data) {
   console.log('Data:', data);
 //  io.emit('server-msg', data);
 
-var wid = 600;
-var hei = 600;
+  
+// Most of my added code is here ----------------------------------------------------------------------------//
+  var wid = 600;
+  var hei = 600;
 
   for (var start = 1; start < 10; start++)
     setTimeout(function () { 
@@ -92,29 +94,29 @@ var hei = 600;
     hei = hei - 55;
     wid = wid - 55;
 
-var opts = { //These Options define how the webcam is operated.
-    //Picture related
-    width: wid, //size
-    height: hei,
-    quality: 100,
-    //Delay to take shot
-    delay: 0,
-    //Save shots in memory
-    saveShots: true,
-    // [jpeg, png] support varies
-    // Webcam.OutputTypes
-    output: "jpeg",
-    //Which camera to use
-    //Use Webcam.list() for results
-    //false for default device
-    device: false,
-    // [location, buffer, base64]
-    // Webcam.CallbackReturnTypes
-    callbackReturn: "location",
-    //Logging
-    verbose: false
-};
-var Webcam = NodeWebcam.create( opts ); //starting up the webcam
+    var opts = { //These Options define how the webcam is operated.
+      //Picture related
+      width: wid, //size
+      height: hei,
+      quality: 100,
+      //Delay to take shot
+      delay: 0,
+      //Save shots in memory
+      saveShots: true,
+      // [jpeg, png] support varies
+      // Webcam.OutputTypes
+      output: "jpeg",
+      //Which camera to use
+      //Use Webcam.list() for results
+      //false for default device
+      device: false,
+      // [location, buffer, base64]
+      // Webcam.CallbackReturnTypes
+      callbackReturn: "location",
+      //Logging
+      verbose: false
+    };
+    var Webcam = NodeWebcam.create( opts ); //starting up the webcam
 
 
 
@@ -123,10 +125,10 @@ var Webcam = NodeWebcam.create( opts ); //starting up the webcam
 
     NodeWebcam.capture('public/'+imageName, opts, function( err, data ) {
     io.emit('newPicture',(imageName+'.jpg'));
-});
+    });
 
 
-}, 2000 * start);
+  }, 2000 * start);
 
 });
 //----------------------------------------------------------------------------//
