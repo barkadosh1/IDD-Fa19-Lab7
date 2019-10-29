@@ -99,6 +99,6 @@ Ultimately, I learned a lot playing with these libraries but I eventually decide
 
 [Modified Camera Code](https://github.com/barkadosh1/IDD-Fa19-Lab7/blob/master/FinalFile.js)
 
-[Modified Camera Video](https://youtu.be/3PgecBAJA4E)
+[Modified Camera Video](https://youtu.be/Q6rIAz5r6kc)
 
 
