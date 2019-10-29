@@ -85,7 +85,7 @@ As can be seen, the first 3 lines are unchanged. However, I comment out the four
 
 [Video Doorbell Code](https://github.com/barkadosh1/IDD-Fa19-Lab7/blob/master/pictureServerUpdated.js)
 
-[Video Doorbell Video](https://github.com/barkadosh1/IDD-Fa19-Lab7/blob/master/pictureServerUpdated.js)
+[Video Doorbell Video](https://youtu.be/3PgecBAJA4E)
 
 ## Part C. Make it your own
 
