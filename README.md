@@ -83,9 +83,9 @@ parser.on('data', function(data) {
 ```
 As can be seen, the first 3 lines are unchanged. However, I comment out the fourth line and then add the code in for snapping a photo below in this block of code. 
 
-[Video Doorbell Code] (https://github.com/barkadosh1/IDD-Fa19-Lab7/blob/master/pictureServerUpdated.js)
+[Video Doorbell Code](https://github.com/barkadosh1/IDD-Fa19-Lab7/blob/master/pictureServerUpdated.js)
 
-[Video Doorbell Video] (https://github.com/barkadosh1/IDD-Fa19-Lab7/blob/master/pictureServerUpdated.js)
+[Video Doorbell Video](https://github.com/barkadosh1/IDD-Fa19-Lab7/blob/master/pictureServerUpdated.js)
 
 ## Part C. Make it your own
 
