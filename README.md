@@ -27,7 +27,7 @@ To do this, I used both the diff function and also inspected the two files of co
 I then focused on documenting the major code additions to better understand how the function of the code was changing. Upon inspection, I only found one non-syntactic line that was present in helloYou that was not present in pictureServer:
 
 ```js
-const server = http.Server(app);        // connects http library to server
+const server = http.Server(app);        
 ```
 However, I was able to find several pieces of code that were added to pictureServer (present in pictureServer and not in helloYou). The first piece of code was the following, which loads the webcam in:
 
@@ -35,7 +35,7 @@ However, I was able to find several pieces of code that were added to pictureSer
 var NodeWebcam = require( "node-webcam" );
 ```
 
-The next chunk of code that was added to the pictureServer code was primarily for setting up the web cam and choosing how it will operate, such as the size of the picture, the delay, where to save the shots, output types, etc. The final line of code in this chunk simply starts up the web cam:
+The next chunk of code that was added to the pictureServer code was primarily for setting up the web cam and choosing its parameters, such as the size of the picture, the delay, where to save the shots, output types, etc. The final line of code in this chunk simply starts up the web cam:
 
 ```js
 var opts = { 
