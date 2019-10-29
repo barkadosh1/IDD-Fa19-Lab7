@@ -91,4 +91,14 @@ As can be seen, the first 3 lines are unchanged. However, I comment out the four
 
 **a. Find, install, and try out a node-based library and try to incorporate into your lab. Document your successes and failures (totally okay!) for your writeup. This will help others in class figure out cool new tools and capabilities.**
 
+For this portion of the lab, I tried for hours to work with several node-based libraries. My initial goal was to use my camera to implement a gif and the first library I tried was called gifshot. Initially, I was getting errors that my program did not recognize gifshot. I then shifted to trying to run the browser in a forked gifshot repository — this time I was having issues getting the server to run properly. I then shifted to a different gif library called gif-encoder and simply tried to get my browser to output a gif that would alternate between blue, green, and red squares. Again, I spent a lot of time trying to get this to work (to no avail). This time, I was able to run my program with no errors — however, the browser wasn’t actually outputting anything. After playing with this for a bit, I pivoted and tried the gm library. With this library, I continued to have issues, the main one being that I couldn’t get the calls to gm to recognize my image. By removing certain lines, I was able to prove to myself that the gm calls were not registering my image (as calling size on it returned that it was undefined). I played around with this quite a bit, trying to get the proper image path to work but was never able to fix the undefined error and therefore was never actually able to use gm to do anything with my image. 
+
+Ultimately, I learned a lot playing with these libraries but I eventually decided I needed to pivot as I couldn’t successfully implement any of them. My alternate idea was therefore to try playing around with the different node-webcam commands in order to create a photo “burst” or a stream of photos in a row. To do this, I implemented a for loop with a time lag before taking each image. I also decided to decrement the length and width of the image and reset the webcam parameters with each iteration to add additional functionality to my photo burst. A video of this photo burst can be found below, along with the altered code. 
+
 **b. Upload a video of your working modified project**
+
+[Modified Camera Code](https://github.com/barkadosh1/IDD-Fa19-Lab7/blob/master/FinalFile.js)
+
+[Modified Camera Video](https://youtu.be/3PgecBAJA4E)
+
+
