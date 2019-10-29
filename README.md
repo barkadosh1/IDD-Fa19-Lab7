@@ -67,6 +67,26 @@ The final chunk of code that was added is used for communicating with the web so
 
 **b. Include a video of your working video doorbell**
 
+To create my video doorbell, I essentially played around with the code until I isolated the emit statement that was causing the screen to turn black and white when the button gets pressed. I commented this line out and replaced it with code for snapping a picture so that when the button gets pressed, a picture is taken. The full code (and video) are below, but a short snippet of the region I actually changed is embedded below as well: 
+
+```js
+serial.pipe(parser);
+parser.on('data', function(data) {
+  console.log('Data:', data);
+//io.emit('server-msg', data);
+  var imageName = new Date().toString().replace(/[&\/\\#,+()$~%.'":*?<>{}\s-]/g, '');
+  console.log('making a making a picture at'+ imageName); 
+  NodeWebcam.capture('public/'+imageName, opts, function( err, data ) {
+  io.emit('newPicture',(imageName+'.jpg'));
+});
+});
+```
+As can be seen, the first 3 lines are unchanged. However, I comment out the fourth line and then add the code in for snapping a photo below in this block of code. 
+
+[Video Doorbell Code] (https://github.com/barkadosh1/IDD-Fa19-Lab7/blob/master/pictureServerUpdated.js)
+
+[Video Doorbell Video] (https://github.com/barkadosh1/IDD-Fa19-Lab7/blob/master/pictureServerUpdated.js)
+
 ## Part C. Make it your own
 
 **a. Find, install, and try out a node-based library and try to incorporate into your lab. Document your successes and failures (totally okay!) for your writeup. This will help others in class figure out cool new tools and capabilities.**
